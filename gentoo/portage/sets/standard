@@ -1,0 +1,8 @@
+app-misc/screen
+www-client/lynx
+app-portage/eix
+sys-process/lsof
+app-editors/vim
+app-portage/gentoolkit
+app-portage/cpuid2cpuflags
+app-admin/eclean-kernel

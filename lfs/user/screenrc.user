@@ -1,0 +1,4 @@
+startup_message off
+time '%C:%s %A %M %d %H%? %l%?'
+activity 'Activity in window %n (%t)'
+bind ^E screen top

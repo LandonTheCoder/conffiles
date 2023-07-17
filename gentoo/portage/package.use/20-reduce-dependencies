@@ -1,0 +1,9 @@
+# Nothing uses introspection, delete its build-deps
+net-dns/avahi -introspection
+# I only need a DHCP client.
+net-misc/dhcp -server
+# lz4 is the only thing that pulls in cmake, which is HUGE.
+sys-apps/systemd -lz4
+
+# Why?
+net-misc/curl -smtp -imap -pop3

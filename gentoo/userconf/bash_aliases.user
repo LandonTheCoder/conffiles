@@ -1,0 +1,15 @@
+# Bash aliases, to lighten the .bashrc
+#emerge_update() {
+#  echo "Syncing emerge ebuild repository/repositories..."
+#  sudo emerge --sync
+#  echo "Updating eix data..."
+#  sudo eix-update
+#}
+# I aliased to a /usr/local/sbin script so sudo would run both at the same time.
+alias emerge-update='sudo emerge --sync'
+# Short form: `sudo emerge -avuDN @world` (hopefully)
+alias emerge-upgrade="sudo emerge --ask --update --deep --newuse --verbose @world"
+# To check for updates without running them
+# Short form: `emerge -pvuDN @world`
+alias emerge-checkupgrade="emerge --pretend --update --deep --newuse --verbose @world"
+alias emerge-depclean="sudo emerge --ask --depclean" # Short: `sudo emerge -ac`

@@ -1,0 +1,6 @@
+# Auto-symlink /usr/src/linux, so that genkernel will default to building it.
+sys-kernel/gentoo-sources symlink
+# Firmware is pointless when using a VM, it just wastes disk space.
+sys-kernel/genkernel -firmware
+# I like zstd compression. Support it in initrd for cleanup. (Why isn't this on by default?)
+app-admin/eclean-kernel zstd

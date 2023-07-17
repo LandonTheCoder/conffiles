@@ -1,0 +1,24 @@
+This keeps track of things installed, and should also keep track of updates to them.
+
+Net Utilities:
+ - curl-8.0.1
+ - lynx-2.8.9rel.1
+ - wget-1.21.3
+General Utilities:
+ - screen-4.9.0
+ - tree-2.1.0
+System Utilities:
+ - neofetch-7.1.0 (manually, see GitHub)
+ - parted-3.5
+ - pciutils-3.9.0
+ - sudo-1.9.13p1
+System Libraries:
+ - libarchive-3.6.2 (also includes bsdtar, you can make Zip files with it!)
+ - Linux-PAM-1.5.2
+Daemons/Services:
+ - openssh-9.2p1
+
+As Dependencies:
+ - make-ca-1.12 (for internet browsers)
+ - p11-kit-0.24.1 (for make-ca)
+ - which-2.21 (for pciutils' update-pciids, it needs this to find a working browser)

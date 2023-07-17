@@ -1,0 +1,36 @@
+alias ksite="lynx www.kernel.org"
+# Build notification aliases
+ismaking() {
+  echo '------MAKING IT!------' && sleep 1s;
+}
+ischecking() {
+  echo '------CHECKING!------' && sleep 1s;
+}
+isinst() {
+  echo ------INSTALLING------;
+}
+alias rdirs="du --si --max-depth=1 /sources"
+
+# Kernel documentation installer
+kinstalldocs() {
+  kinstdir="/usr/share/doc/linux-$1"
+  echo "kinstdir: \"${kinstdir}\""
+  sudo install -d "$kinstdir" && sudo cp -r Documentation/* "$kinstdir";
+}
+
+# Kernel installer
+kinstall() {
+  # Currently meant to be called like `kinstall 6.1.0`
+  ismaking && \
+  make -j4 && \
+  isinst && \
+  sudo make -j4 modules_install && sudo make install && \
+  echo "Installing documentation..." && kinstalldocs $1
+}
+
+# Kernel installer, with some niceties
+kinstall_nice() {
+  time kinstall "$@"
+  echo "Cleaning build tree in 3 seconds..."
+  sleep 3s && make -j4 clean
+}

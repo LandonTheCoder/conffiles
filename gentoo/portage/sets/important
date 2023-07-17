@@ -1,0 +1,7 @@
+sys-kernel/installkernel-gentoo
+sys-apps/merge-usr
+app-admin/sudo
+sys-boot/grub
+sys-kernel/dracut
+app-editors/nano
+net-misc/dhcpcd

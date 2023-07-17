@@ -1,0 +1,23 @@
+# Begin /etc/profile
+
+if [ -e /etc/locale.conf ]; then
+  source /etc/locale.conf && export LANG;
+fi
+
+PS1='\u@\h:\w\$ '
+
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+# The bit added to beginning is shamelessly ripped from my host PS1.
+_LFS_XTERM_TITLE="\[\e]0;\u@\h: \w\a\]"
+# ...and this bit was based off of Gentoo's PS1 under screen, adapted for variable substitution.
+_LFS_SCREEN_TITLE="\[\ek\u@\h:\w\e\\\\"
+# Do this for better xterm and ssh support. It looks weird without proper prompt.
+case "$TERM" in
+    xterm-color|*-256color) PS1="${_LFS_XTERM_TITLE}${PS1}";;
+##    screen*) PS1="${_LFS_SCREEN_TITLE}${PS1}";;
+esac
+# End /etc/profile

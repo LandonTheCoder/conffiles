@@ -1,0 +1,5 @@
+# CURL default arguments
+# Follow redirects
+location
+# Use the easy-to-read progress bar
+progress-bar
