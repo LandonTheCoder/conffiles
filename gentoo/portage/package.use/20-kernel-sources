@@ -4,3 +4,5 @@ sys-kernel/gentoo-sources symlink
 sys-kernel/genkernel -firmware
 # I like zstd compression. Support it in initrd for cleanup. (Why isn't this on by default?)
 app-admin/eclean-kernel zstd
+# Use regular installkernel by default (migrate from installkernel-gentoo)
+sys-kernel/installkernel -systemd

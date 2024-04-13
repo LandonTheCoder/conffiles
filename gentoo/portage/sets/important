@@ -1,4 +1,4 @@
-sys-kernel/installkernel-gentoo
+sys-kernel/installkernel
 sys-apps/merge-usr
 app-admin/sudo
 sys-boot/grub
