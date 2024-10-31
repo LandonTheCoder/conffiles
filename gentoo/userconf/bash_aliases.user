@@ -6,7 +6,7 @@
 #  sudo eix-update
 #}
 # I aliased to a /usr/local/sbin script so sudo would run both at the same time.
-alias emerge-update='sudo emerge --sync'
+alias emerge-update='sudo emaint sync'
 # Short form: `sudo emerge -avuDN @world` (hopefully)
 alias emerge-upgrade="sudo emerge --ask --update --deep --newuse --verbose @world"
 # To check for updates without running them
