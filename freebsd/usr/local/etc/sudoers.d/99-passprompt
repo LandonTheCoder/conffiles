@@ -1,0 +1,3 @@
+# Set a more familiar password prompt for sudo
+# Note: sudoers.d files cannot contain "." in the filename.
+Defaults passprompt="[sudo] password for %p: "
